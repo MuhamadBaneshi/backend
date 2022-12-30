@@ -1,4 +1,1 @@
-function sayHello(name){
-    console.log('Hello ' + name);
-}
-sayHello('muhamad');
+console.log(module);
