@@ -17,6 +17,7 @@ app.get('/api/courses', (req, res) => {
 
 app.get('/api/courses:id', (req, res) => {
   const course = courses.find(c => c.id === parseInt(req.params.id));
+  if (!course) return res.status(404).send('The course with the given ID was not found.');
 });
 
 const port = process.env.PORT || 3000;
