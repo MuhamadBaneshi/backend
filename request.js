@@ -12,11 +12,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/courses', (req, res) => {
-  res.send([1, 2, 3]);
+  res.send(courses);
 });
 
 app.get('/api/courses:id', (req, res) => {
-  res.send(req.query);
+  const course = courses.find(c => c.id === parseInt(req.params.id));
 });
 
 const port = process.env.PORT || 3000;
