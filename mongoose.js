@@ -66,8 +66,11 @@ async function updateCourse(id){
 updateCourse('56563163');
 
 async function removeCourse(id){
- const result = await Course.deleteOne({ _id: id });
-  console.log(result);
+ //const result = await Course.deleteOne({ _id: id });
+  //console.log(result);
+  const course = await Course.findByIdAndRemove(id);
+  console.log(course);
+  
 }
 
 removeCourse('56563163');
