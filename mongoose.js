@@ -18,4 +18,5 @@ const course = new Course({
   name: 'Node.js Course',
   author: 'muhamad',
   tags: ['node', 'backend'],
+  isPublished: true
 });
