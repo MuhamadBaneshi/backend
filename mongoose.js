@@ -52,4 +52,15 @@ async function updateCourse(id){
   console.log(result);
 }
 
+async function updateCourse(id){
+ const course = await Course.findByIdAndUpdate(id, {
+   $set: {
+     author: 'jason',
+     isPublished = false
+   }
+ }, { new: true});
+  
+  console.log(course);
+}
+
 updateCourse('56563163');
