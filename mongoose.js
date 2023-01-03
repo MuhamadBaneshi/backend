@@ -30,7 +30,8 @@ const course = new Course({
 createCourse();
 
 async function getCourses(){
-  const courses = await Course.find();
+  const courses = await Course
+  .find({ author: 'muhamad', isPublished: true });
   console.log(courses);
 }
 
