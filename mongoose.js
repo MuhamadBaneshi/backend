@@ -64,3 +64,11 @@ async function updateCourse(id){
 }
 
 updateCourse('56563163');
+
+async function removeCourse(id){
+ const result = await Course.deleteOne({ _id: id });
+  console.log(result);
+}
+
+removeCourse('56563163');
+
